@@ -1,2 +1,2 @@
 #### My Resume
-[ryanhs.github.com/resume]
+[ryanhs.github.com/resume](http://ryanhs.github.com/resume)
