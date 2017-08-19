@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ryan Hamonangan Silalahi</title>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<style>
+            .clear-margin {
+  margin: 0;
+}
+.space-top {
+  margin-top: 10px;
+}
+.icon-left {
+  margin-right: 5px;
+}
+.icon-right {
+  margin-left: 5px;
+}
+.labels {
+  word-spacing: 5px;
+}
+.label-keyword {
+  display: inline-block;
+  background: #7eb0db;
+  color: white;
+  font-size: 0.9em;
+  padding: 5px;
+  border: 1px solid #357ebd;
+}
+body {
+  font-family: 'Lato';
+  background: #f0f0f0;
+  color: #333333;
+}
+.main {
+  padding: 5px;
+}
+.card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  min-height: 300px;
+  padding: 10px;
+}
+.card-nested {
+  min-height: 0;
+  margin-bottom: 10px;
+  border-width: 1px 0 0 0;
+}
+.background-card {
+  padding: 10px 20px;
+}
+.card-wrapper {
+  padding: 5px;
+}
+.text-bolder {
+  font-weight: bold;
+}
+.background-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.background-details .detail .icon {
+  min-width: 45px;
+  max-width: 45px;
+  text-align: center;
+}
+.background-details .detail .info {
+  width: 100%;
+}
+.background-details .detail .title,
+.background-details .detail .icon {
+  color: #707070;
+}
+.background-details .detail .icon,
+.background-details .detail .info {
+  display: table-cell;
+  padding: 0 10px;
+}
+.info .content.has-sidebar {
+  width: 80%;
+  box-sizing: border-box;
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid #cdcdcd;
+}
+.info .sidebar {
+  margin-left: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.profile-pic {
+  padding: 20px 0;
+}
+.contact-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.contact-details .detail .icon {
+  padding: 0 10px;
+  color: #707070;
+}
+.contact-details .detail .info {
+  font-size: 0.8em;
+}
+.contact-details .detail .icon,
+.contact-details .detail .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (max-width: 992px) {
+  .profile-card {
+    min-height: 180px !important;
+  }
+  .profile-card .detail {
+    display: inline-block !important;
+  }
+  .profile-card .contact-details {
+    text-align: center !important;
+  }
+  .profile-card .social-links {
+    padding-top: 10px;
+  }
+  .card-wrapper {
+    position: static;
+    width: 100%;
+    top: 0;
+  }
+  hr {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+}
+.social-link {
+  margin-left: 5px;
+}
+.social-link:first-child {
+  margin-left: 0;
+}
+.social-link:hover {
+  text-decoration: none;
+}
+.link-github {
+  color: #454545;
+}
+.link-github:hover {
+  color: #2b2b2b;
+}
+.link-twitter {
+  color: #33ccff;
+}
+.link-twitter:hover {
+  color: #00bfff;
+}
+.link-blog {
+  color: #f36f24;
+}
+.link-blog:hover {
+  color: #d8560c;
+}
+.link-linkedin {
+  color: #007bb6;
+}
+.link-linkedin:hover {
+  color: #005983;
+}
+.link-skype {
+  color: #12a5f4;
+}
+.link-skype:hover {
+  color: #0986ca;
+}
+.card-skills {
+  position: relative;
+}
+.skill-level {
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.skill-level .skill-progress {
+  position: absolute;
+  border-radius: 3px;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: height 1s ease;
+}
+.skill-level .skill-progress.beginner {
+  height: 50%;
+  background: #e74c3c;
+}
+.skill-level .skill-progress.intermediate {
+  height: 70%;
+  background: #f1c40f;
+}
+.skill-level .skill-progress.advanced {
+  height: 80%;
+  background: #428bca;
+}
+.skill-level .skill-progress.master {
+  height: 95%;
+  background: #5cb85c;
+}
+.skill-info {
+  margin-left: 10px;
+}
+
+        </style>
+</head>
+<body>
+<script>
+            window.onload = function () {
+                $( ".background-card" ).css( "min-height", window.screen.availHeight + "px" );
+                $( ".js-tooltip" ).tooltip();
+            }
+        </script>
+<div class="container-fluid">
+<div class="row main clearfix">
+<section class="col-md-3 card-wrapper">
+<div class="card profile-card">
+<div class="profile-pic">
+<img class="media-object img-circle center-block" data-src="holder.js/64x64" alt="64x64" src="//www.gravatar.com/avatar/7821e5efd88e52be9d9f188b2af528fc?s=100&amp;r=pg&amp;d=mm" style="width: 100px; height: 100px;">
+</div>
+<h3 class="text-center text-bolder"> Ryan Hamonangan Silalahi</h3>
+<h5 class="text-muted text-center">Senior PHP Developer</h5>
+<hr>
+<div class="contact-details clearfix">
+<div class="detail">
+<span class="icon">
+<i class="fa fa-lg fa-location-arrow"></i>
+</span>
+<span class="info">
+Bandung, West Java,
+ID
+</span>
+</div>
+<div class="detail">
+<span class="icon">
+<i class="fa fa-lg fa-phone"></i>
+</span>
+<span class="info">
+(+62)85 720 759 240
+</span>
+</div>
+<div class="detail">
+<span class="icon">
+<i class="fa fa-lg fa-envelope"></i>
+</span>
+<span class="info">
+<a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="b6dbc498c4cfd7d8c5dfdad7dad7dedff6d1dbd7dfda98d5d9db">[email&#160;protected]</a><script data-cfhash="f9e31" type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>
+</span>
+</div>
+<div class="detail">
+<span class="icon" title="Languages I speak">
+<i class="fa fa-lg fa-language"></i>
+</span>
+<span class="info">
+English, Bahasa, Sundanese
+</span>
+</div>
+</div>
+<hr>
+<div class="social-links text-center">
+<a class="fa fa-linkedin fa-2x social-link link-linkedin" href="https://id.linkedin.com/in/ryan-silalahi-6aba0573" target="_blank"></a>
+<a class="fa fa-github fa-2x social-link link-github" href="http://www.github.com/ryanhs" target="_blank"></a>
+<a class="fa fa-facebook fa-2x social-link link-facebook" href="https://www.facebook.com/dr.web123" target="_blank"></a>
+</div>
+</div>
+</section>
+<section class="col-md-9 card-wrapper pull-right">
+<div class="card background-card">
+<h4 class="text-uppercase text-bolder">Background</h4>
+<hr>
+<div class="background-details">
+<div class="detail">
+<div class="icon">
+<i class="fa fa-lg fa-user"></i>
+</div>
+<div class="info">
+<h4 class="title text-uppercase">
+About
+</h4>
+<div class="content">
+Senior PHP Developer who likes to push the limit of &quot;development&quot; since 2011. Actually for default I&#x27;m an introvert but actually a team player who will follow the leader and care about every team members, but also can be a backup leader when needed.
+</div>
+</div>
+</div>
+<div class="detail">
+<div class="icon">
+<i class="fa fa-lg fa-building"></i>
+</div>
+<div class="info">
+<h4 class="title text-uppercase">
+Work Experience
+</h4>
+<ul class="list-unstyled">
+<li class="card card-nested clearfix">
+<div class="content has-sidebar">
+<p><strong>Lecturer &amp; Web Developer</strong>,&nbsp;Universitas Internasional Batam</p>
+<p>Due to seamolec scholarship, I had to do internship at region in Indonesia for 2 semester, i worked there as lecturer for ungraduate students for only 2 class every semester and become web developer for University needs</p>
+<ul>
+<li> Lecturer of Programming Languages </li>
+<li> Lecturer of Security </li>
+<li> Web Developer for University&#x27;s Internal Applications </li>
+</ul>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Joined:</strong>&nbsp;
+Aug, 2016
+</p>
+<p>
+<strong>Left:</strong>&nbsp;
+May, 2017
+</p>
+<p>
+<i class="fa fa-clock-o icon-left"></i>
+8 months
+</p>
+</div>
+</li>
+<li class="card card-nested clearfix">
+<div class="content has-sidebar">
+<p><strong>PHP Programmer</strong>,&nbsp;PT Voxteneo Indonesia</p>
+<p>My first experience to work fully for European clients for Belgium company in Indonesia &quot;branch&quot;. I learnt many things in this company, from professional development to work in a big team across the world. Quit only because i want to do master degree, really good experience there.</p>
+<ul>
+<li> Prestashop </li>
+<li> Wordpress </li>
+ <li> Laravel </li>
+</ul>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Joined:</strong>&nbsp;
+Sep, 2014
+</p>
+<p>
+<strong>Left:</strong>&nbsp;
+Jul, 2015
+</p>
+<p>
+<i class="fa fa-clock-o icon-left"></i>
+9 months
+</p>
+</div>
+</li>
+<li class="card card-nested clearfix">
+<div class="content has-sidebar">
+<p><strong>PHP Programmer</strong>,&nbsp;PT Topi Putih Kreasi Indonesia</p>
+<p>This was a small company in Indonesia with rapid development for many projects. This company honed me to have a habit to work hard and dedicate myself to every project i work on.</p>
+<ul>
+<li> PHP Developer </li>
+<li> CodeIgniter </li>
+</ul>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Joined:</strong>&nbsp;
+Oct, 2012
+</p>
+<p>
+<strong>Left:</strong>&nbsp;
+Jan, 2014
+</p>
+<p>
+<i class="fa fa-clock-o icon-left"></i>
+1 year 3 months
+</p>
+</div>
+</li>
+<li class="card card-nested clearfix">
+<div class="content has-sidebar">
+<p><strong>PHP Programmer</strong>,&nbsp;CV Pusat Link &amp; CV Techno</p>
+<p>&quot;Was&quot; a startup company to build data package (mobile) and other products payments, connect to banks &amp; service providers, and retail stores.</p>
+<ul>
+<li> Complex payment system as a hub for many products and payment methods </li>
+</ul>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Joined:</strong>&nbsp;
+Jan, 2012
+</p>
+<p>
+<strong>Left:</strong>&nbsp;
+Aug, 2012
+</p>
+<p>
+<i class="fa fa-clock-o icon-left"></i>
+6 months
+</p>
+</div>
+</li>
+<li class="card card-nested clearfix">
+<div class="content has-sidebar">
+<p><strong>PHP Programmer</strong>,&nbsp;Pasebandotcom</p>
+<p>&quot;Was&quot; social media website in Indonesia. The company gave me opportunity for my first full-time job and taught me development for real projects</p>
+<ul>
+<li> First Full-time Job Experience </li>
+</ul>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Joined:</strong>&nbsp;
+Apr, 2011
+</p>
+<p>
+<strong>Left:</strong>&nbsp;
+Dec, 2011
+</p>
+<p>
+<i class="fa fa-clock-o icon-left"></i>
+8 months
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="detail">
+<div class="icon">
+<i class="fa fa-lg fa-code"></i>
+</div>
+<div class="info">
+<h4 class="title text-uppercase">
+Skills
+</h4>
+<div class="content">
+<ul class="list-unstyled">
+<li class="card card-nested card-skills">
+<div class="skill-level js-tooltip" title="Master" data-placement="left">
+<div class="skill-progress master">
+</div>
+</div>
+<div class="skill-info">
+<strong>Web Development</strong>
+<div class="space-top labels">
+<span class="label label-keyword">HTML</span>
+<span class="label label-keyword">CSS</span>
+<span class="label label-keyword">Javascript</span>
+<span class="label label-keyword">PHP</span>
+<span class="label label-keyword">C</span>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="detail">
+<div class="icon">
+<i class="fa fa-lg fa-mortar-board"></i>
+</div>
+<div class="info">
+<h4 class="title text-uppercase">
+Education
+</h4>
+<div class="content">
+<ul class="list-unstyled">
+<li class="card card-nested">
+ <div class="content has-sidebar">
+<p>
+<strong>Game Technology, Master</strong>,&nbsp;
+Institut Teknologi Bandung (ITB) - current
+</p>
+<i>3.30</i>
+<div class="space-top labels">
+<span class="label label-keyword">Artifical Intelligence</span>
+<span class="label label-keyword">Interaction Design</span>
+<span class="label label-keyword">Research</span>
+<span class="label label-keyword">Mobile and Pervasive Computing</span>
+<span class="label label-keyword">...</span>
+</div>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Started:</strong>&nbsp;
+Jan, 2016
+</p>
+<p>
+<strong>Completion:</strong>&nbsp;
+Dec, 2017
+</p>
+</div>
+</li>
+<li class="card card-nested">
+<div class="content has-sidebar">
+<p>
+<strong>Informatics (Computer Science), Bachelor</strong>,&nbsp;
+STMIK &quot;amikbandung&quot;
+</p>
+<i>3.53</i>
+<div class="space-top labels">
+<span class="label label-keyword">English</span>
+<span class="label label-keyword">Algorithm and Data Structure</span>
+<span class="label label-keyword">CCNA</span>
+<span class="label label-keyword">Artifical Intelligence</span>
+<span class="label label-keyword">Data Mining</span>
+<span class="label label-keyword">...</span>
+</div>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Started:</strong>&nbsp;
+Aug, 2011
+</p>
+<p>
+<strong>Completion:</strong>&nbsp;
+ May, 2014
+</p>
+</div>
+</li>
+<li class="card card-nested">
+<div class="content has-sidebar">
+<p>
+<strong>Software Engineering, Vocational High School</strong>,&nbsp;
+SMKN 4 Bandung
+</p>
+<i>-</i>
+<div class="space-top labels">
+<span class="label label-keyword">Algorithm (in C/C++)</span>
+<span class="label label-keyword">PHP</span>
+<span class="label label-keyword">JAVA</span>
+<span class="label label-keyword">...</span>
+</div>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Started:</strong>&nbsp;
+Jul, 2007
+</p>
+<p>
+<strong>Completion:</strong>&nbsp;
+Apr, 2011
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="detail">
+<div class="icon">
+<i class="fa fa-lg fa-trophy"></i>
+</div>
+<div class="info">
+<h4 class="title text-uppercase">
+Awards
+</h4>
+<div class="content">
+<ul class="list-unstyled">
+<li class="card card-nested">
+<div class="content has-sidebar">
+<p>
+<strong>Mahasiswa Program Beasiswa Unggulan, yang Mendapat Prestasi di Bidang Teknologi Informasi</strong>,&nbsp;
+BPKLN Kemdikbud RI
+</p>
+<p class="clear-margin"> Scholarship Award for student who achieved achievement in Field of Technology Information </p>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Awarded on:</strong>&nbsp;
+Dec 01, 2012
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="detail">
+<div class="icon">
+<i class="fa fa-lg fa-child"></i>
+</div>
+<div class="info">
+<h4 class="title text-uppercase">
+Volunteer Work
+</h4>
+<div class="content">
+<ul class="list-unstyled">
+<li class="card card-nested">
+<div class="content has-sidebar">
+<p>
+<strong>Lead Developer/Web Programmer</strong>,&nbsp;
+PPDB Kota Bandung
+</p>
+<p>Local Education Authority trusted me to work on students registration projects (from elementary to junior to senior). Since second year i became lead developer for this project. As a team we tweaked the website as hard as can to make sure the website run smoothly for this events that held 1 month every year</p>
+<ul>
+</ul>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Since:</strong>&nbsp;
+Jun, 2011
+</p>
+<p>
+<strong>Until:</strong>&nbsp;
+Jul, 2017
+</p>
+</div>
+</li>
+<li class="card card-nested">
+<div class="content has-sidebar">
+<p>
+<strong>Lead Developer/Web Programmer</strong>,&nbsp;
+PPDB SMK Jawa Barat
+ </p>
+<p>In 2017 Local Education Authority in region trusted my team to work not only Bandung but for whole region (West Java)</p>
+<ul>
+<li> System almost the same, but for 27 cities (whole region) our skills for scalability tested here :-) </li>
+<li> haproxy </li>
+<li> Due to minimal resource of servers resource, The system created in pure C since 2014 &gt;:) </li>
+</ul>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Since:</strong>&nbsp;
+Jun, 2017
+</p>
+<p>
+<strong>Until:</strong>&nbsp;
+Jul, 2017
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="detail">
+<div class="icon">
+<i class="fa fa-lg fa-book"></i>
+</div>
+<div class="info">
+<h4 class="title text-uppercase">
+Publications
+</h4>
+<div class="content">
+<ul class="list-unstyled">
+<li class="card card-nested">
+<div class="content has-sidebar">
+<p>
+<strong>
+<a href="http://jurnal.kopertipindonesia.or.id/ojs/index.php/kopertip/article/download/9/7" target="_blank">Domain Event Driven pada Aplikasi Komputer Catur: Logika Catur</a>
+</strong>,&nbsp;
+KOPERTIP INDONESIA
+</p>
+<p class="clear-margin"></p>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Published on:</strong>&nbsp;
+Jan 01, 2017
+</p>
+</div>
+</li>
+<li class="card card-nested">
+<div class="content has-sidebar">
+<p>
+<strong>
+<a href="https://scholar.google.co.id/scholar?oi=bibs&amp;cluster=14990797621939158557&amp;btnI=1&amp;hl=en" target="_blank">Optimization and modification of evaluation function in Stockfish chess engine</a>
+</strong>,&nbsp;
+IEEE
+</p>
+<p class="clear-margin"></p>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Published on:</strong>&nbsp;
+Dec 01, 2016
+</p>
+</div>
+</li>
+<li class="card card-nested">
+<div class="content has-sidebar">
+<p>
+<strong>
+Komparasi Algoritma Pengurutan untuk Penerimaan Peserta Didik Baru Kota Bandung
+</strong>,&nbsp;
+Universitas Jenderal Achmad Yani
+</p>
+<p class="clear-margin"></p>
+</div>
+<div class="sidebar text-muted text-center">
+<p>
+<strong>Published on:</strong>&nbsp;
+Apr 01, 2015
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="detail">
+<div class="icon">
+<i class="fa fa-lg fa-heart"></i>
+</div>
+<div class="info">
+<h4 class="title text-uppercase">
+Interests
+</h4>
+<div class="content">
+<ul class="list-unstyled">
+<li class="card card-nested">
+<p>
+<strong>Artifical Intelligence / Deep Learning</strong>
+</p>
+<div class="space-top labels">
+</div>
+</li>
+<li class="card card-nested">
+ <p>
+<strong>Chess</strong>
+</p>
+<div class="space-top labels">
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/tooltip.js"></script>
+</body>
+</html>
