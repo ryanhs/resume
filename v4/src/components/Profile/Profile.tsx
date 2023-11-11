@@ -21,7 +21,11 @@ function Propic() {
     <div className="mt-4">
       <div className="grid grid-cols-6">
         <div className="col-span-1 mx-auto">
-          <img src={"/v4/out/propic-ryan.png"} alt="propic" className="propic-img" />
+          <img
+            src={"/resume/v4/out/propic-ryan.png"}
+            alt="propic"
+            className="propic-img"
+          />
         </div>
 
         <div className="col-span-5 ml-2">
