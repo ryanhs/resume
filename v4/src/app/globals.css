@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-almost-white: #eff2f9;
+  /* --bg-sidebar-blue: #092a4e; */
+  --bg-sidebar-blue: #124277;
+}
+
+body {
+  /* background: var(--bg-almost-white); */
+}
+
+.bg-white {
+  background: white;
+}
+
+.bg-sidebar {
+  background: var(--bg-sidebar-blue);
+  color: white;
+}
+
+.container {
+  max-width: 800px;
+}
+
+@media screen {
+  .page-border {
+    @apply rounded border-2 border-solid border-slate-200 my-5
+  }
+}
+
+.propic-img {
+  @apply rounded-full border-solid border-2 w-14 h-14
+}
+
+p > svg {
+  display: inline-block;
+}
