@@ -87,21 +87,14 @@ function Experiences() {
       company: `Vox Teneo`,
       from: "Sep 2014",
       to: "Jul 2015",
-      duration: "11 mos",
+      duration: "9 mos",
     },
     {
       title: `PHP Developer`,
       company: `PT. Topiputih Kreasi Indonesia`,
-      from: "Dec 2012",
+      from: "Oct 2012",
       to: "Jan 2014",
-      duration: "1 yr 2 mos",
-    },
-    {
-      title: `PHP Programmer`,
-      company: `paseban.com`,
-      from: "Apr 2011",
-      to: "Dec 2012",
-      duration: "1 yr 9 mos",
+      duration: "1 yr 3 mos",
     },
     {
       title: `Full Stack Developer`,
@@ -110,13 +103,20 @@ function Experiences() {
       to: "Aug 2012",
       duration: "8 mos",
     },
+    {
+      title: `PHP Programmer`,
+      company: `paseban.com`,
+      from: "Apr 2011",
+      to: "Dec 2011",
+      duration: "6 mos",
+    },
   ];
 
   return (
     <div className="mt-4 gap">
       <p className="mb-2 font-bold text-lg">
         <LiaBuildingSolid />
-        &nbsp;Experiences ({dayjs('2012-01').toNow(true)})
+        &nbsp;Experiences ({dayjs('2011-04').toNow(true)})
       </p>
       {data.map((item) => (
         <div key={item.title + item.company}>
