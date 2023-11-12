@@ -1,6 +1,6 @@
+import DownloadButton from '@/components/DownloadButton/DownloadButton';
 import Profile from '@/components/Profile/Profile';
 import Sidebar from '@/components/Sidebar/Sidebar';
-import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -12,6 +12,7 @@ export default function Home() {
           </div>
 
           <div className="col-span-2">
+            <DownloadButton />
             <Sidebar />
           </div>
         </div>

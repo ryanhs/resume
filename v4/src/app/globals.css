@@ -8,6 +8,12 @@
   --bg-sidebar-blue: #124277;
 }
 
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+
 body {
   /* background: var(--bg-almost-white); */
 }
@@ -36,5 +42,13 @@ body {
 }
 
 p > svg {
+  display: inline-block;
+}
+
+.download-button {
+  @apply bg-slate-100 hover:bg-slate-200 text-black text-xs py-1 px-2 rounded float-right m-2
+}
+
+.download-button > svg {
   display: inline-block;
 }
