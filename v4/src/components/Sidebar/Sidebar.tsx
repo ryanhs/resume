@@ -29,11 +29,13 @@ function Details() {
   ];
 
   return (
-    <div>
-      <p className="font-bold text-lg">Details</p>
+    <div className="sidebar-block">
+      <p className="font-bold text-base">Details</p>
       <ul>
         {data.map((item) => (
-          <li key={item.label} className="mb-0">{item.label}</li>
+          <li key={item.label} className="mb-0">
+            {item.label}
+          </li>
         ))}
       </ul>
     </div>
@@ -46,11 +48,11 @@ function Links() {
   ];
 
   return (
-    <div className="mt-10">
-      <p className="font-bold text-lg">Links</p>
-      <ul>
+    <div className="sidebar-block">
+      <p className="font-bold text-base">Links</p>
+      <ul>  
         {data.map((item) => (
-          <li key={item.href} className="mb-2 break-words">
+          <li key={item.href} className="mb-2">
             <a href={item.href} target="_blank">
               {item.href}
             </a>
@@ -73,8 +75,8 @@ function Skills() {
   ];
 
   return (
-    <div className="mt-10">
-      <p className="font-bold text-lg">Skills</p>
+    <div className="sidebar-block">
+      <p className="font-bold text-base">Skills</p>
       <ul>
         {data.map((item) => (
           <li key={item.label} className="mb-2">
@@ -94,8 +96,8 @@ function Languages() {
   ];
 
   return (
-    <div className="mt-10">
-      <p className="font-bold text-lg">Languages</p>
+    <div className="sidebar-block">
+      <p className="font-bold text-base">Languages</p>
       <ul>
         {data.map((item) => (
           <li key={item.label} className="mb-2">
@@ -113,7 +115,7 @@ export default function Sidebar() {
     <>
       <div className={`bg-sidebar w-full p-4 leading-6 ${garamond.className}`}>
         <div className="grid grid-cols-2 md:grid-cols-1 w-full">
-          <div className="col-span-1 mx-2 md:mx-0 mt-10 md:mt-20">
+          <div className="col-span-1 mx-2 md:mx-0 md:mt-6">
             <Details />
           </div>
           <div className="col-span-1 mx-2 md:mx-0">
