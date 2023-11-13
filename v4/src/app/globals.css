@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
   --bg-almost-white: #eff2f9;
@@ -33,11 +33,13 @@ body {
 
 @media screen {
   .page-border {
-    @apply rounded border-2 border-solid border-slate-200 my-5
+    @apply rounded border-2 border-solid border-slate-200
   }
 }
 
 .propic-img {
+  width: 56px !important;
+  height: 56px !important;
   @apply rounded-full border-solid border-2 w-14 h-14
 }
 

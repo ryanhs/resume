@@ -20,7 +20,7 @@ function Propic() {
   return (
     <div className="mt-4">
       <div className="grid grid-cols-6">
-        <div className="col-span-1 mx-auto">
+        <div className="col-span-1 xs:col-span-2 mx-auto">
           <img
             src={"/resume/v4/out/propic-ryan.png"}
             alt="propic"
@@ -28,7 +28,7 @@ function Propic() {
           />
         </div>
 
-        <div className="col-span-5 ml-2">
+        <div className="col-span-5 xs:col-span-4 ml-2">
           <h2 className="text-2xl font-bold">{data.name}</h2>
           <p className="text-xs leading-6">{data.role}</p>
         </div>
@@ -242,7 +242,7 @@ pp: 217-221`,
 export default function Profile() {
   return (
     <>
-      <div className={`w-full leading-6 py-4 px-10 font-sans`}>
+      <div className={`w-full leading-6 py-4 px-6 font-sans`}>
         <Propic />
         <Headline />
         <Experiences />
