@@ -29,16 +29,12 @@ function Details() {
   ];
 
   return (
-    <div className="mt-20">
+    <div>
       <p className="font-bold text-lg">Details</p>
       <ul>
         {data.map((item) => (
           <li key={item.label} className="mb-0">{item.label}</li>
         ))}
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
       </ul>
     </div>
   );
@@ -54,8 +50,10 @@ function Links() {
       <p className="font-bold text-lg">Links</p>
       <ul>
         {data.map((item) => (
-          <li key={item.href} className="mb-2">
-            <a href={item.href} target="_blank">{item.href}</a>
+          <li key={item.href} className="mb-2 break-words">
+            <a href={item.href} target="_blank">
+              {item.href}
+            </a>
           </li>
         ))}
       </ul>
@@ -114,10 +112,20 @@ export default function Sidebar() {
   return (
     <>
       <div className={`bg-sidebar w-full p-4 leading-6 ${garamond.className}`}>
-        <Details />
-        <Links />
-        <Skills />
-        <Languages />
+        <div className="grid grid-cols-2 md:grid-cols-1 w-full">
+          <div className="col-span-1 mx-2 md:mx-0 mt-10 md:mt-20">
+            <Details />
+          </div>
+          <div className="col-span-1 mx-2 md:mx-0">
+            <Links />
+          </div>
+          <div className="col-span-1 mx-2 md:mx-0">
+            <Skills />
+          </div>
+          <div className="col-span-1 mx-2 md:mx-0">
+            <Languages />
+          </div>
+        </div>
       </div>
     </>
   );
