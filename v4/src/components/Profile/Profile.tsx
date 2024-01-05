@@ -6,12 +6,6 @@ import { LiaBookSolid, LiaBuildingSolid } from "react-icons/lia";
 
 dayjs.extend(relativeTime);
 
-const garamond = EB_Garamond({
-  subsets: ["latin"],
-  weight: "400",
-  style: "normal",
-});
-
 function Propic() {
   const data = {
     name: "Ryan Hamonangan",
@@ -20,7 +14,7 @@ function Propic() {
   return (
     <div className="mt-4">
       <div className="grid grid-cols-6">
-        <div className="col-span-1 xs:col-span-2 mx-auto">
+        <div className="col-span-2 sm:col-span-1 mx-auto">
           <img
             src={"/resume/v4/out/propic-ryan.png"}
             alt="propic"
@@ -28,7 +22,7 @@ function Propic() {
           />
         </div>
 
-        <div className="col-span-5 xs:col-span-4 ml-2">
+        <div className="col-span-4 sm:col-span-5 ml-2">
           <h2 className="text-2xl font-bold">{data.name}</h2>
           <p className="text-xs leading-6">{data.role}</p>
         </div>

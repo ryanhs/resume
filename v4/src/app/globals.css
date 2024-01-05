@@ -31,7 +31,7 @@ body {
   max-width: 800px;
 }
 
-@media screen {
+@media screen and (min-width: 640px) {
   .page-border {
     @apply rounded border-2 border-solid border-slate-200
   }
@@ -53,4 +53,16 @@ p > svg {
 
 .download-button > svg {
   display: inline-block;
+}
+
+.sidebar-block {
+  @apply mt-10
+}
+
+.sidebar-block ul li, .sidebar-block p {
+  @apply text-sm break-words
+}
+
+.sidebar-block p.font-bold {
+  @apply text-base
 }
