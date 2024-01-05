@@ -116,7 +116,7 @@ function Experiences() {
     <div className="mt-4 gap">
       <p className="mb-2 font-bold text-lg">
         <LiaBuildingSolid />
-        &nbsp;Experiences ({dayjs('2011-04').toNow(true)})
+        &nbsp;Experiences {/* ({dayjs('2011-04').toNow(true)}) */}
       </p>
       {data.map((item) => (
         <div key={item.title + item.company}>
@@ -124,7 +124,7 @@ function Experiences() {
             {item.title}, {item.company}
           </p>
           <p className="mb-2 text-xs text-gray-600">
-            {item.from} - {item.to} · {item.duration}
+            {item.from} - {item.to} {/* · {item.duration} */}
           </p>
         </div>
       ))}
