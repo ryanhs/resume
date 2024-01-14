@@ -66,3 +66,22 @@ p > svg {
 .sidebar-block p.font-bold {
   @apply text-base
 }
+
+@media print {
+    .pagebreak { page-break-before: always; } /* page-break-after works, as well */
+}
+
+@media screen {
+    .pagebreak {
+      margin: 0;
+      height: 0;
+      color: inherit;
+      border-top-width: 3px;
+    }
+}
+
+/* text indent on list */
+.list-disc {
+  text-indent: -20px;
+  padding-left: 20px;
+}

@@ -1,5 +1,7 @@
 import DownloadButton from '@/components/DownloadButton/DownloadButton';
+import { LatestJobDesc } from '@/components/LatestJobDesc/LatestJobDesc';
 import MobileNavbar from '@/components/MobileNavbar/MobileNavbar';
+import { PageBreak } from '@/components/PageBreak/PageBreak';
 import Profile from '@/components/Profile/Profile';
 import Sidebar from '@/components/Sidebar/Sidebar';
 
@@ -16,6 +18,11 @@ export default function Home() {
           <div className="col-span-4 sm:col-span-2">
             <DownloadButton />
             <Sidebar />
+          </div>
+
+          <div className="col-span-6">
+            <PageBreak />
+            <LatestJobDesc />
           </div>
         </div>
       </div>

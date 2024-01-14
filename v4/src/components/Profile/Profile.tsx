@@ -3,7 +3,6 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { LiaBookSolid, LiaBuildingSolid } from "react-icons/lia";
 
-
 dayjs.extend(relativeTime);
 
 function Propic() {
@@ -39,7 +38,7 @@ function Headline() {
       `AWS Specialist`,
       `DevOps & Application Security Expert`,
       `Passionate about Learning and Challenging Projects`,
-      `Let's Connect for Outstanding Software Solutions!`
+      // `Let's Connect for Outstanding Software Solutions!`
     ],
   };
 
@@ -53,14 +52,24 @@ function Headline() {
   );
 }
 
+type IExperience = {
+  title: string;
+  company: string;
+  from: string;
+  to: string;
+  duration: string;
+  tagLine?: string;
+};
+
 function Experiences() {
-  const data = [
+  const data: IExperience[] = [
     {
       title: `Senior Software Architect`,
       company: `PT ASTRA INTERNATIONAL TBK`,
       from: "Aug 2018",
       to: "Present",
       duration: dayjs("2018-08").toNow(true),
+      tagLine: `My role at Astra International reflects a commitment to technological innovation, strategic leadership, and a proactive approach to shaping the future of technology within the organization.`,
     },
     {
       title: `AI Researcher (University Lab)`,
@@ -117,9 +126,18 @@ function Experiences() {
           <p className="text-sm">
             {item.title}, {item.company}
           </p>
+
           <p className="mb-2 text-xs text-gray-600">
             {item.from} - {item.to} {/* · {item.duration} */}
           </p>
+
+          {item.tagLine && (
+            <blockquote className="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
+              <p className="text-xs italic leading-relaxed text-gray-900 dark:text-white">
+                {item.tagLine}
+              </p>
+            </blockquote>
+          )}
         </div>
       ))}
     </div>
@@ -221,11 +239,13 @@ pp: 217-221`,
         <LiaBookSolid />
         Publications
       </p>
-      <div className="mt-2 grid grid-cols-2 gap-4">
+      <div className="mt-2">
         {data.map((item) => (
           <div key={item.title} className="mt-2 col-span-1">
-            <p className="text-sm">{item.title}</p>
-            <p className="text-xs text-gray-600">{item.issued}</p>
+            <p className="text-sm">
+              {item.title}
+              <span className="text-xs text-gray-600">&nbsp;~ {item.issued}</span>
+            </p>
           </div>
         ))}
       </div>
