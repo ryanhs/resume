@@ -65,11 +65,19 @@ function Experiences() {
   const data: IExperience[] = [
     {
       title: `Senior Software Architect`,
-      company: `PT ASTRA INTERNATIONAL TBK`,
-      from: "Aug 2018",
+      company: `PT ASTRA Digital Mobil (OLX Indonesia)`,
+      from: "Feb 2024",
       to: "Present",
       duration: dayjs("2018-08").toNow(true),
-      tagLine: `My role at Astra International reflects a commitment to technological innovation, strategic leadership, and a proactive approach to shaping the future of technology within the organization.`,
+      tagLine: `My role at ADMo/OLX reflects a commitment to technological innovation, strategic leadership, and a proactive approach to shaping the future of technology within the organization.`,
+    },
+    {
+      title: `Senior Software Architect`,
+      company: `PT ASTRA INTERNATIONAL TBK`,
+      from: "Aug 2018",
+      to: "Jan 2024",
+      duration: "5 yr 5mos",
+      // tagLine: `My role at Astra International reflects a commitment to technological innovation, strategic leadership, and a proactive approach to shaping the future of technology within the organization.`,
     },
     {
       title: `AI Researcher (University Lab)`,
